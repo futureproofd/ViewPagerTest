@@ -2,25 +2,32 @@
 <items version="2" >
 
     <item
-        jar="/home/marcus/Downloads/ViewPagerTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
+        jar="/home/marcus/Documents/ViewPagerTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
+        <dex dex="/home/marcus/Documents/ViewPagerTest/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-6464212dc21aa0eb82c479c155fc54da15c9b14b.jar" />
+    </item>
+    <item
+        jar="/home/marcus/Documents/ViewPagerTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/classes.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="8694693636ab36910c8100ce527c258ff3ebece0">
-        <dex dex="/home/marcus/Downloads/ViewPagerTest/app/build/intermediates/pre-dexed/debug/classes-12aed58d0977c28603b742baf412488ffee21bdc.jar" />
+        <dex dex="/home/marcus/Documents/ViewPagerTest/app/build/intermediates/pre-dexed/debug/classes-783e29f50f882b753f043e5c874b4bdf4ea528f4.jar" />
+    </item>
+    <item
+        jar="/home/marcus/.gradle/caches/modules-2/files-2.1/com.google.guava/guava/18.0/cce0823396aa693798f8882e64213b1772032b09/guava-18.0.jar"
+        jumboMode="false"
+        revision="20.0.0"
+        sha1="cce0823396aa693798f8882e64213b1772032b09">
+        <dex dex="/home/marcus/Documents/ViewPagerTest/app/build/intermediates/pre-dexed/debug/guava-18.0-0b7447325f2119f013211ee1abc551b0d42a2cf1.jar" />
     </item>
     <item
         jar="/home/marcus/Eclipse/adt-bundle-linux-x86_64-20140321/sdk/extras/android/m2repository/com/android/support/support-annotations/20.0.0/support-annotations-20.0.0.jar"
         jumboMode="false"
         revision="20.0.0"
         sha1="9d9013e9ff35fc3756411e62873c363c70c638fa">
-        <dex dex="/home/marcus/Downloads/ViewPagerTest/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-ab0cd7d0426df3a457bb1173bdf5f46a1c2872ea.jar" />
-    </item>
-    <item
-        jar="/home/marcus/Downloads/ViewPagerTest/app/build/intermediates/exploded-aar/com.android.support/support-v4/20.0.0/libs/internal_impl-20.0.0.jar"
-        jumboMode="false"
-        revision="20.0.0"
-        sha1="e40b3078e3fbd353c9f44da8df25a8fc0078209d">
-        <dex dex="/home/marcus/Downloads/ViewPagerTest/app/build/intermediates/pre-dexed/debug/internal_impl-20.0.0-8df3921f0cef62c125d6d6dbe3e5fa46f259dd37.jar" />
+        <dex dex="/home/marcus/Documents/ViewPagerTest/app/build/intermediates/pre-dexed/debug/support-annotations-20.0.0-ab0cd7d0426df3a457bb1173bdf5f46a1c2872ea.jar" />
     </item>
 
 </items>

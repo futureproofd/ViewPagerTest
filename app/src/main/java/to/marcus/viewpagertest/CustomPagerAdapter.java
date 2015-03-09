@@ -7,18 +7,19 @@ import android.util.Log;
 import android.util.SparseArray;
 import android.view.ViewGroup;
 import java.util.ArrayList;
-import java.util.List;
 
 /**
  * Created by marcus on 10/12/14.
+ * addMessage method needs fixing - need to split into smaller arrays for passing on to the fragment
+ * getItem method needs a newInstance of only the latest sublist
  */
-public class CustomPagerAdapter extends FragmentStatePagerAdapter{
+public class CustomPagerAdapter extends FragmentStatePagerAdapter {
 
     SparseArray<Fragment> fragmentSparseArray = new SparseArray<Fragment>();
-    private List<Messages> messageList = new ArrayList<Messages>();
+    private ArrayList<Msg> mMessageList = new ArrayList<Msg>();
     private static final String TAG = "CustomPagerAdapter";
 
-    public CustomPagerAdapter(FragmentManager fm){
+    public CustomPagerAdapter(FragmentManager fm) {
         super(fm);
         Log.i(TAG, "Instantiating adapter");
     }
@@ -26,41 +27,33 @@ public class CustomPagerAdapter extends FragmentStatePagerAdapter{
     @Override
     public Fragment getItem(int position) {
         Log.i(TAG, "Creating new Fragment " + position);
-        return MsgFragment.newInstance(messageList.get(position));
+        return MsgFragment.newInstance(mMessageList);
     }
 
     @Override
     public int getCount() {
-        return messageList.size();
+        return mMessageList.size();
     }
 
     @Override
-    public Object instantiateItem(ViewGroup container, int position){
+    public Object instantiateItem(ViewGroup container, int position) {
         Fragment fragment = (Fragment) super.instantiateItem(container, position);
         fragmentSparseArray.put(position, fragment);
         return fragment;
     }
 
     @Override
-    public void destroyItem(ViewGroup container, int position, Object object){
+    public void destroyItem(ViewGroup container, int position, Object object) {
         fragmentSparseArray.remove(position);
         super.destroyItem(container, position, object);
     }
 
-    public Fragment getFragmentAtPosition(int position){
+    public Fragment getFragmentAtPosition(int position) {
         return fragmentSparseArray.get(position);
     }
 
-    public void addMessages(Messages messages){
+    public void addMessages(Msg msg) {
         Log.i(TAG, "adding message to list");
-        messageList.add(messages);
-    }
-
-    public Messages getLastMessages(){
-        if (messageList.size() > 0){
-            return messageList.get(messageList.size() - 1);
-        }else{
-            return new Messages();
-        }
+        mMessageList.add(msg);
     }
 }

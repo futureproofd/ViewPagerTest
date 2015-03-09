@@ -3,24 +3,15 @@ package to.marcus.viewpagertest;
 /**
  * Created by marcus on 26/11/14.
  */
-import android.content.Context;
-
-import java.util.ArrayList;
-import java.util.UUID;
-import org.json.JSONException;
-import org.json.JSONObject;
 
 public class Contact {
 
-    private UUID mId;
+    private String mId;
     private String mName;
     private String mLastMsg;
-    private Context mContext;
+    private String mThreadId;
 
-    public Contact(){
-        //get a new UUID (realistically this would be the ID of the ongoing conversation record)
-        mId = UUID.randomUUID();
-    }
+    public Contact(){}
 
     //override object class array adapter default conversion
     @Override
@@ -28,9 +19,11 @@ public class Contact {
         return mName;
     }
 
-    public UUID getId(){
+    public String getId(){
         return mId;
     }
+
+    public String getThreadId(){return mThreadId;}
 
     public String getName(){
         return mName;
@@ -47,5 +40,9 @@ public class Contact {
     public void setName(String name){
         mName = name;
     }
+
+    public void setId(String id){mId = id;}
+
+    public void setThreadId(String id){mThreadId = id;}
 
 }
